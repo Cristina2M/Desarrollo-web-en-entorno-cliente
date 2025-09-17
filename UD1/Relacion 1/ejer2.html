@@ -12,7 +12,18 @@
     al usuario introducir una edad, si es mayor o igual a 18 
     -->
 
+            <h2>Ejercicio 2</h2>
+        <input id="edad" type="number" value="0">
+        <button onclick="mayorEdad()">Enviar</button>
+        <p id="resultado"> Resultado </p>
     <script>
+
+        function mayorEdad(){
+            let edad = parseInt(document.getElementById("edad").value);
+            let resultado = edad >= 18 ? "Eres mayor de edad": "NO eres mayor de edad";
+            document.getElementById("resultado").innerHTML= resultado;
+        }
+
 
         
     </script>

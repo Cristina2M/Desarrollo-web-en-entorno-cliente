@@ -12,9 +12,15 @@
     -->
 
     <script>
-        console.log('La operacion de 20==20 es ' + 20==20);
-        document.writeln('La operación de 20===20 es ' + 20===20);
-        document.writeln('La operación de 20===20 es ' + 20===20.0);
+        //console.log('<br> La operacion de 20 == 20 es ' + (20 == 20)); PERO no sé porque no se ve 
+        document.writeln('<br> La operación de 20 === 20 es ' + (20 === 20));
+        document.writeln('<br> La operación de 20 === 20.0 es ' + (20 === 20.0));
+        document.writeln('<br> La operación de "Juan" == "juan" es ' + ("Juan" == "juan"));
+        document.writeln('<br> La operación de "Juan" > "juan" es ' + ("Juan" > "juan"));
+        document.writeln('<br> La operación de "Juan" < "juan" es ' + ("Juan" < "juan"));
+        document.writeln('<br> La operación de "123" == 123 es ' + ("123" == 123));
+        document.writeln('<br> La operación de "123" === 123 es ' + ("123" === 123));
+        document.writeln('<br> La operación de parseInt("123") == 123 es ' + (parseInt("123") == 123));
 
     </script>
 
