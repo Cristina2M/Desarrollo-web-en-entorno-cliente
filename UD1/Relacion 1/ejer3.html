@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio3</title>
+</head>
+
+<body>
+
+    <!--
+    Crea un programa que pida al usuario que introduzca una edad y muestre el siguiente 
+mensaje en función del número introducido: 
+
+ >18: absoluto 
+ 16-18: juvenil 
+ 14-15: cadete 
+ 12-13: infantil 
+ 10-11: alevín 
+ 8-9: benjamín 
+
+Si se introduce un número menor de 8 se mostrará un mensaje al respecto. 
+Comenta el código con los comentarios que estimes necesarios.
+    -->
+
+    <p>Introduce tu edad: </p>
+    <input type="number" id="edad" min="1" required>
+    <button onclick="categoria()">Comprobar</button> <!--Al pulsar el boton llamamos a la funcion-->
+
+    <p id="mensaje"></p>
+
+    <script>
+        function categoria() {
+            // debugger; Para hacer una parada e ir viendo paso a paso lo que va haciendo el programa a partir de aqui
+            let edad = parseInt(document.getElementById("edad").value);
+
+            if (edad > 18) { //uso un if para comprobar la edad introducida, aunque también se podría haber hecho con un switch, pero cuidado al poner los valores en el case en ese caso
+                document.getElementById("mensaje").innerHTML = "Absoluto"; //cambia el valor del ultimo p por el del mensaje correspondiente, mostrandose en pantalla
+            } else if (edad >= 16 && edad <= 18) {
+                document.getElementById("mensaje").innerHTML = "Juvenil";
+            } else if (edad >= 14 && edad <= 15) {
+                document.getElementById("mensaje").innerHTML = "Cadete";
+            } else if (edad >= 12 && edad <= 13) {
+                document.getElementById("mensaje").innerHTML = "Infantil";
+            } else if (edad >= 10 && edad <= 11) {
+                document.getElementById("mensaje").innerHTML = "Alevín";
+            } else if (edad >= 8 && edad <= 9) {
+                document.getElementById("mensaje").innerHTML = "Benjamín";
+            } else {
+                document.getElementById("mensaje").innerHTML = "No existe categoría para menores de 8 años.";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

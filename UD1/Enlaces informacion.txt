@@ -1,0 +1,7 @@
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+https://cipfpbatoi.github.io/materials/daw/dwc/01-js/01-sintaxis.html
