@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio7</title>
+</head>
+
+<body>
+    <script>
+        function verificarRespuesta() {
+            let respuesta = prompt("¿Cuál es el apellido del primer presidente español de la democracia?");
+            // Convertimos la respuesta a minúsculas para poder hacer la comparación mejor
+            respuesta = respuesta ? respuesta.trim().toLowerCase() : "";
+
+            if (respuesta === "suárez") {
+                alert("¡Acceso permitido!");
+                // Redirigimos a la página deseada
+                window.location.href = "https://es.wikipedia.org/wiki/Adolfo_Su%C3%A1rez"; // Sustituye con la URL deseada
+            } else {
+                alert("Respuesta incorrecta. Intenta de nuevo.");
+                verificarRespuesta();
+            }
+        }
+
+        // Para que al recargar la página vuelva a llamar a la función
+        window.onload = verificarRespuesta;
+    </script>
+
+</body>
+</html>
