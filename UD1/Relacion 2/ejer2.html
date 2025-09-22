@@ -6,6 +6,45 @@
     <title>R2-Ejercicio2</title>
 </head>
 <body>
-    
+
+        <label for="alto">Indica el alto de las columnas en píxeles</label>
+        <input id="alto" type="number" value="200">
+        <br>
+        <br>
+        <label for="ancho">Indica el ancho de las columnas en píxeles</label>
+        <input id="ancho" type="number" value="150">
+        <br>
+        <br>
+        <label for="columnas">Indica cuantas columnas quieres</label>
+        <input id="columnas" type="number" value="3">
+        <br>
+        <br>
+        <button onclick="CrearTabla()">Enviar</button>
+
+
+ 
+    <script>
+        debugger
+
+        CrearTabla();
+
+        function CrearTabla(){
+            let alt = parseInt(document.getElementById("alto").value);
+
+            let anch = parseInt(document.getElementById("ancho").value);
+            let col = parseInt(document.getElementById("columnas").value);
+
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="${anch}px">`);
+        document.write(`<tr bgcolor="white" heigth="${alt}px">`);
+
+        for (let i = 0; i < col; i++) {
+            document.write(`<td width="${anch}px">&nbsp;</td>`);
+        }
+
+        document.write(`</tr>`);
+        document.write(`</table>`)
+        }
+    </script>
+
 </body>
 </html>
