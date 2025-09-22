@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R2-Ejercicio3</title>
+    <title>R2-Ejercicio4</title>
 </head>
 <body>
        <script>
 
             let columnas = parseInt(prompt("Introduce el número de columnas:"));
             let altura = parseInt(prompt("Introduce la altura de las celdas en pixeles:"));
-            let anchura = parseInt(prompt("Introduce la anchura de las celdas en pixeles):"));
+            let anchura = parseInt(prompt("Introduce la anchura de las celdas en pixeles:"));
 
         document.write(`<table border="0" cellspacing="2" bgcolor="black">`);
         document.write(`<tr bgcolor="white" height="${altura}px">`);
 
-        for (let i = 0; i < columnas; i++) {
-            let color = (i % 2 === 0) ? "white" : "black";
-            document.write(`<td width="${anchura}px" bgcolor="${color}">&nbsp;</td>`);
+        let i = 0;
+        while (i < columnas) {
+            document.write(`<td width="${anchura}px">&nbsp;</td>`);
+            i++;
         }
 
         document.write(`</tr>`);

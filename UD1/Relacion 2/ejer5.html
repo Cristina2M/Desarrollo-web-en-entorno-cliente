@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Ejercicio5</title>
+</head>
+<body>
+
+    <script>
+    // Jugador 1 introduce el número
+    const numeroSecreto = parseInt(prompt("Jugador 1: Introduce el número a adivinar:"));
+
+    let acertado = false;
+    let intentos = 0;
+
+    // Jugador 2 adivina el número
+    while (!acertado) {
+        const intento = parseInt(prompt("Jugador 2: Adivina el número:"));
+        intentos++;
+
+        if (intento === numeroSecreto) {
+            alert(`¡Correcto! Has adivinado el número en ${intentos} intentos.`);
+            acertado = true;
+        } else if (intento < numeroSecreto) {
+            alert("El número es mayor. Intenta de nuevo.");
+        } else {
+            alert("El número es menor. Intenta de nuevo.");
+        }
+    }
+</script>
+    
+</body>
+</html>

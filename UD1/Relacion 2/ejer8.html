@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Ejercicio8</title>
+</head>
+<body>
+
+    <script>
+    let tamano = parseInt(prompt("Introduce el tamaño de la celda en pixeles:"));
+
+    document.write('<table cellspacing="0" border="1">');
+
+    for (let fila = 0; fila < 8; fila++) {
+        document.write('<tr>');
+
+        for (let columna = 0; columna < 8; columna++) {
+            // Alterna los colores
+            let color = (fila + columna) % 2 === 0 ? "white" : "black";
+            document.write(`<td width="${tamano}" height="${tamano}" bgcolor="${color}"></td>`);
+        }
+
+        document.write('</tr>');
+    }
+
+    document.write('</table>');
+</script>
+    
+</body>
+</html>
