@@ -11,20 +11,20 @@
     <script>
         function verificarRespuesta() {
             let respuesta = prompt("¿Cuál es el apellido del primer presidente español de la democracia?");
-            // Convertimos la respuesta a minúsculas para poder hacer la comparación mejor
+            // Convertimos la respuesta a minúsculas para que no haya error en la comparación
             respuesta = respuesta ? respuesta.trim().toLowerCase() : "";
 
             if (respuesta === "suárez") {
                 alert("¡Acceso permitido!");
                 // Redirigimos a la página deseada
-                window.location.href = "https://es.wikipedia.org/wiki/Adolfo_Su%C3%A1rez"; // Sustituye con la URL deseada
+                window.location.href = "https://es.wikipedia.org/wiki/Adolfo_Su%C3%A1rez"; // Sustituye con la URL
             } else {
                 alert("Respuesta incorrecta. Intenta de nuevo.");
                 verificarRespuesta();
             }
         }
 
-        // Para que al recargar la página vuelva a llamar a la función
+        // Para llamar a la función
         window.onload = verificarRespuesta;
     </script>
 

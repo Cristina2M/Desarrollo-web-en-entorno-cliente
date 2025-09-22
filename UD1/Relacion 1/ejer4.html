@@ -6,30 +6,14 @@
     <title>R1-Ejercicio4</title>
 </head>
 <body>
-    <!-- 
-    Crea un programa que genere un listado de horas que vayan desde las 9 hasta las 21:30, de 
-30 minutos en 30 minutos. En lugar de mostrar un alert, utiliza la instrucción document.write(“Mensaje”) que 
-muestra los datos en el propio HTML. Ten  en  cuenta  que  tendrás  que  utilizar  una  senencia  for  para  las  horas  y  (por  ejemplo)  una 
-variable booleana que irá cambiando de true a false si es hora en punto u hora media. 
-Comenta el código con los comentarios que estimes necesarios. 
-    -->
 
     <script>
-        let minuto=true;
-        // REHACER usar solo un document.write
-
-        for (let hora = 9; hora < 22;) {
-            if (minuto) {
-                document.write(hora + ":00 <br>");
-                minuto=false;
-            } else {
-                document.write(hora + ":30 <br>");
-                minuto=true;
-                hora++;
+        // Con el primer for recorremos las horas desde 9 hasta 21 y con el segundo los minutos
+        for (let hora = 9; hora <= 21; hora++) {
+            for (let i = 0; i < 2; i++) {
+                document.write(hora + ":" + (i === 0 ? "00" : "30") + "<br>"); // cuando i sea 0 escribirá 00 y cuando sea 1 escribirá 30
             }
         }
-
-
 
     </script>
 </body>

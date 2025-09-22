@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio8</title>
+</head>
+<body>
+        <script>
+        function verificarPresidente() {
+            let respuesta = prompt("¿Cuál fue el primer presidente de la democracia española?");
+            
+            // Si el usuario pulsa "Cancelar", se termina la ejecución
+            if (respuesta === null) {
+                alert("Acceso cancelado.");
+                return;
+            }
+
+            // Quito los espacios al inicio y final y lo paso todo a minúsculas
+            respuesta = respuesta.trim().toLowerCase();
+
+            // Variables
+            const nombreCorrecto = "adolfo";
+            const apellidoCorrecto = "suárez";
+
+            // Divido la respuesta en palabras
+            const partes = respuesta.split(" ").filter(p => p.length > 0);
+
+            // Si el nombre y apellido correctos:
+            if (partes.length === 2 && partes[0] === nombreCorrecto && partes[1] === apellidoCorrecto) { // El && es igual a un AND
+                alert("¡Acceso permitido!");
+                window.location.href = "https://es.wikipedia.org/wiki/Adolfo_Su%C3%A1rez"; // Sustituye la URL
+            }
+            // Si solo el nombre es correcto:
+            else if (partes.length === 1 && partes[0] === nombreCorrecto) {
+                alert("Te falta el apellido.");
+                verificarPresidente(); // Se repite pedir los datos
+            }
+            // Si solo el apellido es correcto:
+            else if (partes.length === 1 && partes[0] === apellidoCorrecto) {
+                alert("Te falta el nombre.");
+                verificarPresidente(); // Se repite pedir los datos
+            }
+            // Todo es incorrecto:
+            else {
+                alert("ERROR. Inténtelo de nuevo.");
+                verificarPresidente(); // Se repite pedir los datos
+            }
+        }
+
+        // Para llamar a la función
+        window.onload = verificarPresidente;
+    </script>
+
+
+</body>
+</html>
