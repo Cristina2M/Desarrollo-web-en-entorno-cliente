@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R4-Ejercicio2</title>
 </head>
+
 <body>
-    
+
+    <script>
+
+
+
+        function addOnlyNums(...arg) {
+            let suma = 0;
+            for (let i = 0; i < arg.length; i++) {
+                if (!isNaN(arg[i])) {
+                    suma += arg[i];
+                }
+            }
+            return suma
+        }
+        document.write(addOnlyNums(1, 'cat', 3, 4));
+
+    </script>
+
 </body>
+
 </html>

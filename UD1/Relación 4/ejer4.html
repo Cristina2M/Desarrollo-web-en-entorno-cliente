@@ -6,6 +6,28 @@
     <title>R4-Ejercicio4</title>
 </head>
 <body>
-    
+    <script>
+
+        const ar1= [1, 2, 3];
+        const ar2= ['uno', 'dos', 'tres'];
+
+        document.write(combineTwoArrays(ar1, ar2));
+
+
+
+        function combineTwoArrays(array1, array2){
+            const arVacío= [];
+            for (let i = 0; i < array1.length; i++) {
+                arVacío.push(array1[i]);
+            }
+            for (let i = 0; i < array2.length; i++) {
+                arVacío.push(array2[i]);
+            }
+        return arVacío;
+        }
+
+        
+
+    </script>
 </body>
 </html>
