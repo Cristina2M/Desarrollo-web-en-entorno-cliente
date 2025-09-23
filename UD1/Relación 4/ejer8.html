@@ -8,12 +8,24 @@
 <body>
     <script>
 
-        let valor;
-        let rangoInf;
-        let rangoSup;
+        let valor1 = 7;
+        let rangoInf1 = 4;
+        let rangoSup1 = 6;
+
+        let valor2 = 6;
+        let rangoInf2 = 3;
+        let rangoSup2 = 9;
+
+        document.write(rango(valor1,rangoInf1,rangoSup1));
+        document.write(`<br> <br>`);
+        document.write(rango(valor2,rangoInf2,rangoSup2));
 
         function rango(valor, rangoInf, rangoSup){
-            
+            if (valor>rangoInf && valor<rangoSup) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
 

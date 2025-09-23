@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R3-Ejercicio4</title>
 </head>
+
 <body>
-    
+
+    <script>
+        convertTemperature();
+
+        function convertTemperature() {
+            // Celsius a Fahrenheit
+            let celsius = 20;
+            let convertFahrenheit = celsius * 9 / 5 + 32;
+            document.write(`${celsius}°C es ${convertFahrenheit}°F`);
+
+            document.write(`<br><br>`);
+
+            // Fahrenheit a Celsius
+            let fahrenheit = 104;
+            let convertCelsius = (fahrenheit - 32) * 5 / 9;
+            document.write(`${fahrenheit}°F es ${convertCelsius}°C`);
+        }
+
+    </script>
+
 </body>
+
 </html>

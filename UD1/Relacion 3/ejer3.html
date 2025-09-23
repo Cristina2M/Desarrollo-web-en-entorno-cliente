@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R3-Ejercicio3</title>
 </head>
+
 <body>
-    
+
+
+    <script>
+        let radio = 10;
+        let pi = 3.1416;
+        calcularCircunferencia(radio);
+        document.write(`<br><br>`);
+        calcularArea(radio);
+
+
+        function calcularCircunferencia(radio) {
+            let circunferencia = 2 * pi * radio;
+            document.write(`La circunferencia es ${circunferencia}`);
+        }
+
+        function calcularArea(radio) {
+            let area = pi * radio * radio;
+            document.write(`El área es ${area}`);
+        }
+
+
+
+    </script>
+
 </body>
+
 </html>

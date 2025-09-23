@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R3-Ejercicio2</title>
 </head>
+
 <body>
-    
+    <script>
+
+        supplyCalculator(25, 80, 2);
+
+        function supplyCalculator(edadActual, edadMaxima, cantidadPorDia) {
+
+            let añosRestantes = edadMaxima - edadActual;
+
+            let cantidadTotal = añosRestantes * 365 * cantidadPorDia; // multiplica los años restantes, por los dias de 1 año y por la cantidad cada dia.
+
+            document.write(`Necesitarás ${cantidadTotal} para llegar a la edad de ${edadMaxima} años`);
+        }
+
+
+
+
+    </script>
 </body>
+
 </html>
