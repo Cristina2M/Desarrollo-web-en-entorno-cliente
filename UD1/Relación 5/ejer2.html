@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R5-Ejercicio2</title>
 </head>
+
 <body>
-    
+    <script>
+        document.write(squareAndSum(2, 4, 3));
+        document.write(`<br> <br>`);
+        document.write(squareAndSum(1, 2));
+
+
+        function squareAndSum(...args) {
+            let cuadrado = 0;
+            let suma = 0;
+
+            for (let i = 0; i < args.length; i++) {
+                cuadrado = args[i] * args[i];
+                suma += cuadrado;
+            }
+            return suma;
+        }
+
+
+    </script>
 </body>
+
 </html>
