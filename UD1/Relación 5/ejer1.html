@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R5-Ejercicio1</title>
 </head>
+
 <body>
     <script>
 
+        document.write(onlyUniques('cat', 'cat', 'dog', 'pig'));
+        document.write(`<br> <br>`);
+        document.write(onlyUniques(1, 4, 7, 1, 2, 7, 4));
 
 
+        function onlyUniques(...args) {
+            const únicos = []; //Array para guardar sin repetir
 
+            for (let i = 0; i < args.length; i++) {
+                let elemento = args[i]; //cogemos un valor y lo pasamos a una variable
+                let yaExiste = false;
+
+                for (let j = 0; j < únicos.length; j++) {
+                    if (elemento === únicos[j]) {
+                        yaExiste = true;
+                        break;
+                    }
+                }
+
+                // cuando yaExiste es false, se añade
+                if (!yaExiste) {
+                    únicos.push(elemento);
+                }
+            }
+            return únicos;
+        }
     </script>
 </body>
+
 </html>
