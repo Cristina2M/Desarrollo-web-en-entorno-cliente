@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R4-Ejercicio14</title>
+</head>
+
+<body>
+    <script>
+
+        document.write(divisible(15, 3));
+        document.write(`<br> <br>`);
+        document.write(divisible(10, 3));
+        document.write(`<br> <br>`);
+        document.write(divisible(10, 0));
+
+        function divisible(dividendo, divisor) {
+            if (divisor === 0) {
+                return "No se puede dividir entre 0";
+            }
+
+            if (dividendo % divisor === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>
