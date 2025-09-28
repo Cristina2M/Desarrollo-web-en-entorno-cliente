@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+        let ahora = new Date();
+
+
+        let horas = String(ahora.getHours()).padStart(2, '0');
+        let minutos = String(ahora.getMinutes()).padStart(2, '0');
+        let segundos = String(ahora.getSeconds()).padStart(2, '0');
+
+        document.write(`${horas}:${minutos}:${segundos}`);
+
+
+        console.log(`Son las ${horas}h y ${minutos}m`);
+
+    </script>
+</body>
+
+</html>

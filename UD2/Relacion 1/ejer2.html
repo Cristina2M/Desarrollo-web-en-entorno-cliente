@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 2</title>
+</head>
+
+<body>
+    <script>
+
+        cumpleañosDomingo("2000-09-25");
+
+        function cumpleañosDomingo(fechaNacimiento) {
+            let [anioInicio, mes, dia] = fechaNacimiento.split('-').map(Number);
+
+            for (let anio = anioInicio; anio <= 2100; anio++) {
+                let fecha = new Date(anio, mes - 1, dia); // Mes -1 porque enero = 0
+                if (fecha.getDay() === 0) { // 0 = domingo
+                    document.write(`Tu cumpleaños cae en domingo en el año ${anio} <br>`);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
