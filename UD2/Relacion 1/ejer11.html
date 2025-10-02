@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 11</title>
+</head>
+<body>
+    <script>
+    let frase = prompt("Introduce una cadena de texto:");
+
+    let fraseReves = "";
+
+    // Recorremos la frase del final al principio
+    for (let i = frase.length - 1; i >= 0; i--) {
+      fraseReves += frase[i];
+    }
+
+
+    document.write("Frase original: " + frase + "<br>");
+    document.write("Frase al revés: " + fraseReves);
+  </script>
+</body>
+</html>

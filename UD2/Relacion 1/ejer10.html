@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 10</title>
+</head>
+<body>
+    <script>
+    let frase = prompt("Introduce una frase:");
+
+
+    let fraseMinus = frase.toLowerCase();
+
+
+    let a = 0
+    let e = 0 
+    let i = 0
+    let o = 0
+    let u = 0;
+
+
+    for (let j = 0; j < fraseMinus.length; j++) {
+      let letra = fraseMinus[j];
+      
+      if (letra === "a") a++;
+      else if (letra === "e") e++;
+      else if (letra === "i") i++;
+      else if (letra === "o") o++;
+      else if (letra === "u") u++;
+    }
+
+
+    document.write("La frase introducida es: " + frase + "<br><br>");
+    document.write("Número de 'a': " + a + "<br>");
+    document.write("Número de 'e': " + e + "<br>");
+    document.write("Número de 'i': " + i + "<br>");
+    document.write("Número de 'o': " + o + "<br>");
+    document.write("Número de 'u': " + u + "<br>");
+  </script>
+</body>
+</html>
