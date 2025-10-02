@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+    let tiempo = 10; // contador en segundos
+
+    function contar() {
+      if (tiempo >= 0) {
+        document.body.innerHTML = "Tiempo restante: " + tiempo + " segundos";
+        tiempo--;
+        setTimeout(contar, 1000); // llama a la función cada segundo
+      } else {
+        // Cuando llega a 0, redirige a Google
+        location.href = "https://www.google.com";
+      }
+    }
+
+    contar();
+  </script>
+</body>
+</html>
