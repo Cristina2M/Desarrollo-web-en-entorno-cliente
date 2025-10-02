@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Ejercicio 2</title>
+</head>
+
+<body>
+    <script>
+    function reloj() {
+      let ahora = new Date();
+      let horas = ahora.getHours();
+      let minutos = ahora.getMinutes();
+      let segundos = ahora.getSeconds();
+
+      // Formatear con cero delante si es menor a 10
+      horas = horas < 10 ? "0" + horas : horas;
+      minutos = minutos < 10 ? "0" + minutos : minutos;
+      segundos = segundos < 10 ? "0" + segundos : segundos;
+
+      // Limpiar la página y mostrar la hora
+      document.body.innerHTML = horas + ":" + minutos + ":" + segundos;
+
+      // Llamar a la función cada segundo
+      setTimeout(reloj, 1000);
+    }
+
+    reloj();
+  </script>
+</body>
+</html>
