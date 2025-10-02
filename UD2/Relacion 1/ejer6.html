@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        //Para ver el resultado pulsar F12
+    let nombreCompleto = prompt("Introduce tu nombre y apellidos (ejemplo: Juan Pérez García):");
+
+    // 1. Tamaño de la cadena
+    console.log("1. Tamaño del nombre completo: " + nombreCompleto.length);
+
+    // 2. Mostrar en minúsculas y mayúsculas
+    console.log("2. En minúsculas: " + nombreCompleto.toLowerCase());
+    console.log("   En mayúsculas: " + nombreCompleto.toUpperCase());
+
+    // 3. Dividir en nombre + apellidos
+    let partes = nombreCompleto.trim().split(" ");
+
+    if (partes.length >= 3) {
+      console.log("3. Nombre: " + partes[0]);
+      console.log("   Apellido 1: " + partes[1]);
+      console.log("   Apellido 2: " + partes[2]);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        // La \n es para hacer un salto de línea
+        let opcion = parseInt(prompt("Elige una opción (1-4):\n1. Potencia\n2. Raíz cuadrada\n3. Redondeo\n4. Trigonometría"));
+
+        switch (opcion) {
+            case 1:  // Potencia
+                let base = parseFloat(prompt("Introduce la base:"));
+                let exponente = parseFloat(prompt("Introduce el exponente:"));
+                let potencia = Math.pow(base, exponente);
+                document.write("La potencia de " + base + " elevado a " + exponente + " es: " + potencia);
+                break;
+
+            case 2:  // Raíz
+                let numero = parseFloat(prompt("Introduce un número no negativo:"));
+                if (numero < 0) {
+                    document.write("Error: El número no puede ser negativo.");
+                } else {
+                    let raiz = Math.sqrt(numero);
+                    document.write("La raíz de " + numero + " es: " + raiz);
+                }
+                break;
+
+            case 3:  // Redondeo
+                let decimal = parseFloat(prompt("Introduce un número decimal:"));
+                let redondeoNormal = Math.round(decimal);
+                let redondeoArriba = Math.ceil(decimal);
+                let redondeoAbajo = Math.floor(decimal);
+                document.write("Número introducido: " + decimal + "<br>");
+                document.write("Redondeo normal: " + redondeoNormal + "<br>");
+                document.write("Redondeo al alza: " + redondeoArriba + "<br>");
+                document.write("Redondeo a la baja: " + redondeoAbajo + "<br>");
+                break;
+
+            case 4:  // Trigonometría
+                let angulo = parseFloat(prompt("Introduce un ángulo entre 0 y 360 grados:"));
+                if (angulo < 0 || angulo > 360) {
+                    document.write("Error: El ángulo debe estar entre 0º y 360º.");
+                } else {
+                    let radianes = angulo * Math.PI / 180; // Conversión a radianes
+                    let seno = Math.sin(radianes).toFixed(4);
+                    let coseno = Math.cos(radianes).toFixed(4);
+                    let tangente = Math.tan(radianes).toFixed(4);
+                    document.write("Ángulo: " + angulo + "º<br>");
+                    document.write("Seno: " + seno + "<br>");
+                    document.write("Coseno: " + coseno + "<br>");
+                    document.write("Tangente: " + tangente + "<br>");
+                }
+                break;
+
+            default:
+                document.write("Opción no válida. Debes elegir entre 1 y 4.");
+                break;
+        }
+    </script>
+</body>
+</html>
