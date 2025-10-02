@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Ejercicio 9</title>
+</head>
+<body>
+    <script>
+    let frase = prompt("Introduce una frase:");
+
+
+    let fraseMinus = frase.toLowerCase();
+
+
+    let contador = 0;
+
+    // los || es igual al OR
+    for (let i = 0; i < fraseMinus.length; i++) {
+      if (fraseMinus[i] === "a" || fraseMinus[i] === "e" || fraseMinus[i] === "i" || fraseMinus[i] === "o" || fraseMinus[i] === "u") {
+        contador++;
+      }
+    }
+
+
+    document.write("La frase introducida es: " + frase + "<br>");
+    document.write("Número total de vocales: " + contador);
+  </script>
+</body>
+</html>
