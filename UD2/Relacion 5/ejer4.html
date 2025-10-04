@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R5-Ejercicio 4</title>
+</head>
+
+<body style="font-family: Arial; text-align:center; margin-top:50px;">
+  <h2>Hemos cambiado de ubicación esta página.</h2>
+  <p>En breves momentos será redireccionado...</p>
+  <p>Redirección en: <span id="contador">5</span> segundos</p>
+
+  <script>
+    let tiempo = 5;
+
+    function cuentaAtras() {
+      document.getElementById("contador").innerText = tiempo;
+      if (tiempo === 0) {
+        location.href = "http://www.pccomponentes.com";
+      } else {
+        tiempo--;
+        setTimeout(cuentaAtras, 1000); //1 segundo = 1000 milisegundos
+      }
+    }
+    
+    cuentaAtras();
+  </script>
+</body>
+</html>
