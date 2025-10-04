@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R5-Ejercicio 3</title>
+</head>
+
+<body>
+  <h2 onclick="abrirVentanas()">
+    Haz clic aquí
+  </h2>
+
+  <p>No sé hacer lo de añadir ventana 1, ventana 2.... y el boton de cerrar</p>
+
+  <script>
+    let miVentana = null;
+
+    function abrirVentanas() {
+      for (let i = 1; i <= 5; i++) {
+        miVentana = window.open("https://www.google.com", `nuevaVentana${i}`, "width=350,height=350");
+      }
+    }
+  </script>
+</body>
+</html>
