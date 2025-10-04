@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R5-Ejercicio 5</title>
+</head>
+<body>
+
+  <button onclick="abrirVentana()">Abrir ventana secundaria</button>
+
+  <script>
+    let miVentana = null;
+
+    function abrirVentana() {
+      miVentana = window.open("ventanaSecundaria.html", "nuevaVentana", "width=400,height=300"); //que ventana queremos abrir
+    }
+  </script>
+
+
+  <button onclick="cerrarVentana()">Cerrar ventana secundaria</button>
+
+  <script>
+    function cerrarVentana() {
+      if (miVentana && !miVentana.closed) { //si existe una ventana guardada en miVentana y todavía está abierta
+        miVentana.close();
+      } else {
+        alert("No hay ventana abierta.");
+      }
+    }
+  </script>
+
+
+
+  <button onclick="enviarMensaje()">Envia un mensaje a la ventana secundaria</button>
+
+  <script>
+    // Función para enviar mensaje
+    function enviarMensaje() {
+      if (miVentana && !miVentana.closed) {
+        miVentana.recibeMensaje ("Mensaje desde la ventana principal"); //recibeMensaje está definida en ventanaSecundaria.html
+      } else { 
+        alert("No hay ventana abierta para enviar mensaje.");
+      }
+    }
+  </script>
+
+
+</body>
+</html>
