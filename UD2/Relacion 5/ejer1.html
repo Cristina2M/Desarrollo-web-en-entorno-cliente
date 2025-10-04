@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ventana Principal</title>
+</head>
+<body>
+    <h1>Ventana Principal</h1>
+    <button id="abrirVentana">Poner título Ventana Secundaria</button>
+    <button id="cerrarVentana">Cerrar Ventana Secundaria</button>
+
+    <script>
+        let ventanaSecundaria = null;
+
+        document.getElementById('abrirVentana').addEventListener('click', () => {
+            let titulo = prompt("Escribe un título para la nueva ventana:");
+
+            if (titulo) {
+                let ancho = 500;
+                let alto = 400;
+                let left = window.screen.width - ancho; // posición derecha
+                let top = 0; // posición arriba
+
+                ventanaSecundaria = window.open(
+                    "",
+                    "ventanaSecundaria",
+                    `width=${ancho},height=${alto},top=${top},left=${left}`
+                );
+
+                if (ventanaSecundaria) {
+                    ventanaSecundaria.document.title = titulo;
+                    ventanaSecundaria.document.body.innerHTML = `<h1>${titulo}</h1>`;
+                } else {
+                    alert("No se pudo abrir la ventana. Revisa que tu navegador permita ventanas emergentes.");
+                }
+            }
+        });
+
+        document.getElementById('cerrarVentana').addEventListener('click', () => {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                ventanaSecundaria.close();
+            } else {
+                alert("No hay ventana secundaria abierta.");
+            }
+        });
+    </script>
+</body>
+</html>
