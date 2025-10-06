@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 9</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        let textoUsuario = prompt("Introduce una cadena de texto:");
+
+
+        let palabras = textoUsuario.split(" ");
+        for (let i = 0; i < palabras.length; i++) {
+            palabras[i] = palabras[i].trim();
+        }
+
+
+        palabras = palabras.filter(function (p) { return p.length > 0; });//para quitar los huecos vacíos
+
+
+        let analisis = analizarPalabras(palabras);
+
+        // Los resultados son en una nueva ventana
+        let ventana = window.open("", "Resultados", "width=500,height=400");
+
+        ventana.document.write("<h2>Resultados del análisis</h2>");
+        ventana.document.write("<p>Número de palabras: " + analisis.numPalabras + "</p>");
+        ventana.document.write("<p>Primera palabra: " + analisis.primera + "</p>");
+        ventana.document.write("<p>Última palabra: " + analisis.ultima + "</p>");
+        ventana.document.write("<p>Palabras en orden inverso: " + analisis.invertidas.join(", ") + "</p>");
+        ventana.document.write("<p>Palabras ordenadas de la A a la Z: " + analisis.ordenAZ.join(", ") + "</p>");
+        ventana.document.write("<p>Palabras ordenadas de la Z a la A: " + analisis.ordenZA.join(", ") + "</p>");
+    </script>
+</body>
+
+</html>
