@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 4</title>
+</head>
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const array1 = ["manzana", "pera", "naranja", "uva", "fresa"];
+        const array2 = ["pera", "kiwi", "uva", "sandía", "melon"];
+
+
+
+        const interseccion = interseccionArrays(array1, array2);
+        const union = unionArrays(array1, array2);
+        const diferencia = diferenciaArrays(array1, array2);
+
+        
+        document.write("<p>Array 1: " + array1.join(", ") + "</p>");
+        document.write("<p>Array 2: " + array2.join(", ") + "</p>");
+        document.write("<p>Intersección: " + interseccion.join(", ") + "</p>");
+        document.write("<p>Unión: " + union.join(", ") + "</p>");
+        document.write("<p>Diferencia (Array1 - Array2): " + diferencia.join(", ") + "</p>");
+    </script>
+
+    </script>
+</body>
+</html>

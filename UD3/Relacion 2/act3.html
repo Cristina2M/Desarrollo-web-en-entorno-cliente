@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 3</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        let N = parseInt(prompt("Introduce el valor máximo de los números aleatorios (N):"));
+
+        const numerosAleatorios = generarNumerosAleatoriosN(20, N);
+
+        document.write(`<p>Array de 20 números aleatorios entre 0 y ${N}:<br>${numerosAleatorios.join(", ")}</p>`);
+
+    </script>
+
+</body>
+
+</html>
