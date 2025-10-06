@@ -12,7 +12,7 @@
     Haz clic aquí
   </h2>
 
-  <p>No sé hacer lo de añadir ventana 1, ventana 2.... y el boton de cerrar</p>
+  <p>El ejercicio está mal redactado</p>
 
   <script>
     let miVentana = null;
@@ -20,8 +20,11 @@
     function abrirVentanas() {
       for (let i = 1; i <= 5; i++) {
         miVentana = window.open("https://www.google.com", `nuevaVentana${i}`, "width=350,height=350");
+        miVentana.document.write (`Ventana ${i}`);
       }
     }
   </script>
+
+    
 </body>
 </html>
