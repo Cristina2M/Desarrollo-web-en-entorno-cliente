@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 6</title>
+</head>
+<body>
+
+    <h1>Búsqueda de Palabra</h1>
+
+    <p>Utilizar sólo y exclusivamente HTML y CSS en una página nos limita considerablemente. </p>
+    <p>Si bien es cierto que con estos dos lenguajes podemos hacer un gran abanico de cosas, hay otras que serían totalmente imposibles, o al menos, mucho más fáciles de realizar si tuvieramos un lenguaje de programación a nuestra disposición.</p>
+    <p>Y en este punto es donde aparece Javascript.</p>
+    <p>Javascript es un lenguaje de programación, o lo que es lo mismo, un mecanismo con el que podemos decirle a nuestro navegador que tareas debe realizar, en que orden y cuantas veces.</p>
+    <p>Muchas de las tareas que realizamos con HTML y CSS se podrían realizar con Javascript. </p>
+    <p>De hecho, es muy probable que al principio nos parezca que es mucho más complicado hacerlo con Javascript, y que por lo tanto no merece la pena.</p>
+    <p>Sin embargo, con el tiempo veremos que Javascript nos ofrece una mayor flexibilidad y un abanico de posibilidades más grande, y que bien usadas, pueden ahorrarnos bastante tiempo.</p>
+
+    <button id="buscarBtn">Buscar palabra</button>
+
+    <p id="resultado"></p>
+
+    <script src="funciones.js"></script>
+    <script>
+        document.getElementById("buscarBtn").onclick = buscarPalabra;
+    </script>
+    
+</body>
+</html>

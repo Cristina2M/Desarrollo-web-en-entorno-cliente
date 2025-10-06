@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 5</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+
+        const numerosAleatorios = [];
+
+        for (let i = 0; i < 20; i++) {
+            var numero = Math.floor(Math.random() * 101);
+            numerosAleatorios.push(numero);
+        }
+
+
+        document.write("<p>Array generado: " + numerosAleatorios.join(", ") + "</p>");
+
+
+        let estadisticas = calcularEstadisticas(numerosAleatorios);
+
+        // Mostrar estadísticas en la página
+        document.write("<p>Valor mínimo: " + estadisticas.minimo + "</p>");
+        document.write("<p>Valor máximo: " + estadisticas.maximo + "</p>");
+        document.write("<p>Valor medio: " + estadisticas.media + "</p>");
+
+
+    </script>
+</body>
+
+</html>
