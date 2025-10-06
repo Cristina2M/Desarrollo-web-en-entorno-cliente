@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+</head>
+
+<body>
+    <!--
+    EJERCICIO: Guarda en un array la lista de la compra con Peras, Manzanas, Kiwis, Plátanos y Mandarinas. Haz los siguiente con splice:
+
+        Elimina las manzanas (debe quedar Peras, Kiwis, Plátanos y Mandarinas)
+        Añade detrás de los Plátanos Naranjas y Sandía (debe quedar Peras, Kiwis, Plátanos, Naranjas, Sandía y Mandarinas)
+        Quita los Kiwis y pon en su lugar Cerezas y Nísperos (debe quedar Peras, Cerezas, Nísperos, Plátanos, Naranjas, Sandía y Mandarinas)
+    -->
+
+    <script>
+
+        const arCompra = ["Peras", "Manzanas", "Kiwis", "Plátanos", "Mandarinas"];
+
+        arCompra.splice(1, 1)
+        arCompra1=arCompra;
+        console.log (arCompra1)
+
+        arCompra.splice(3, 0, "Naranjas", "Sandía")
+        arCompra2=arCompra;
+        console.log (arCompra2)
+
+        arCompra.splice(1, 1, "Cerezas", "Nísperos");
+        console.log (arCompra);
+
+
+    </script>
+
+
+    <!--  
+        sort ordena por caracteres, si tienes (1, 11, 3, 4), ve el 11 como dos 1, por lo que se queda en la segunda posicion
+    -->
+    <script>
+        const numeros = [1, 2, 11, 8, 3];
+        console.log(numeros.sort())
+
+
+    // Para ordenar:
+        function fOrdenaNumeros (elemento1, elemento2){
+            if (elemento1<elemento2) {
+                return -1;
+            } else if (elemento1=elemento2) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+        console.log(numeros.sort(fOrdenaNumeros))
+
+        //otra forma mas corta de ordenar numeros:
+        function ordena (v1, v2) {
+            return v1-v2;
+        }
+
+        //una forma elegante de hacerlo con el arrow function
+        numeros.sort((v1, v2) => v1-v2);
+
+    </script>
+
+
+</body>
+</html>
