@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 7</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const numerosAleatorios = generarNumerosAleatorios(20);
+
+
+        document.write("<p>Array sin ordenar: " + numerosAleatorios.join(", ") + "</p>");
+
+        const numerosOrdenados = numerosAleatorios.sort(function (a, b) {
+            return a - b;
+        });
+
+        const numerosOrdenadosSinDuplicados = eliminarDuplicados(numerosOrdenados);
+
+        document.write("<p>Array ordenado y sin duplicados: " + numerosOrdenadosSinDuplicados.join(", ") + "</p>");
+    </script>
+
+</body>
+
+</html>

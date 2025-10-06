@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 8</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Nombres</title>
+</head>
+<body>
+    <h1>Ordenar Nombres</h1>
+
+    <script>
+        const entrada = prompt("Introduce varios nombres separados por comas (ej: Ana, Juan, Pedro, Marta):");
+
+        const nombres = entrada.split(",");
+
+        for (let i = 0; i < nombres.length; i++) {
+            nombres[i] = nombres[i].trim();
+        }
+
+        nombres.sort();
+
+        document.write("<p>Nombres ordenados: " + nombres.join(", ") + "</p>");
+    </script>
+</body>
+</html>
