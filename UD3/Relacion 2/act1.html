@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2-Actividad 1</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const numeros = [];
+
+        
+        for (let i = 0; i < 5; i++) {
+            let num = parseFloat(prompt(`Introduce el número ${i + 1}:`));
+            numeros.push(num);
+        }
+
+
+        let { minimo, maximo, media } = calcularEstadisticas(numeros);
+
+
+        console.log(`Números ingresados: ${numeros.join(", ")}`);
+        console.log(`Valor mínimo: ${minimo}`);
+        console.log(`Valor máximo: ${maximo}`);
+        console.log(`Valor medio: ${media}`);
+
+
+
+    </script>
+
+</body>
+
+</html>
