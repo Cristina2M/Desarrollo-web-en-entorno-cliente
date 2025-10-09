@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Actividad 3</title>
+</head>
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const conteos = simulacionTiradas();
+
+            console.log("Número de ocurrencias:");
+
+            for (const valor in conteos) {
+                if (conteos.hasOwnProperty(valor)) {
+                    console.log(`  Valor ${valor}: ${conteos[valor]} veces`);
+                }
+            }
+            console.log("--------------------");
+            alert("Simulación de 6000 tiradas terminada.");
+    </script>
+</body>
+</html>
