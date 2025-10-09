@@ -54,8 +54,6 @@ function potenciaRecursiva(base, exponente) {
     // Manejar exponentes negativos no es trivial con recursión simple,
     // pero si ocurre, se devuelve un error o se usa Math.pow para el resultado inverso.
     if (exponente < 0) {
-        console.error("La función potenciaRecursiva solo está diseñada para exponentes no negativos.");
-        // Opcional: devolver 1 / potenciaRecursiva(base, -exponente);
         return 1 / potenciaRecursiva(base, -exponente);; 
     }
 
