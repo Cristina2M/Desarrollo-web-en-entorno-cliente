@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arAlumnos = [{ Nombre:"Diana", Nota:8}, {Nombre:"Lucas", Nota:3}, {Nombre:"Cristina", Nota:9}]
+
+        function suspenso(arg) {
+            return arg.Nota < 5
+        }
+
+        let valor = arAlumnos.find(suspenso)
+        
+        document.write(valor); //devuelve un objeto
+        document.write(valor.Nombre) //elegimos que queremos ver del objeto
+    </script>
+
+
+    <script>
+        function encuentra(array, fLocaliza) { //el array tiene objetos
+            for (let i = 0; i < array.length; i++) {
+                const obj = array[i];
+                if (fLocaliza(obj)) { //si el objeto se ha localizado
+                    return obj;
+                }
+            }
+            return undefined;
+        }
+
+        function fLocaliza(objeto) {
+            return objeto.Nota >= 5
+        }
+
+        let valor2 = encuentra(arAlumnos, fLocaliza);
+        document.write(valor2.Nombre);
+    </script>
+
+</body>
+</html>
