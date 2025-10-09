@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Actividad 5</title>
+</head>
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const radioDePrueba = 4.5;
+
+console.log(`Radio utilizado para ambos cálculos: ${radioDePrueba}\n`);
+
+
+const volumenEsfera = calcularVolumenEsfera(radioDePrueba);
+
+console.log(`Cálculo de la Esfera (V = 4/3 * π * r³):`);
+console.log(`Volumen: ${volumenEsfera.toFixed(4)} unidades cúbicas.`);// .toFixed(4) limita los decimales
+
+
+const areaCirculo = calcularAreaCirculo(radioDePrueba);
+
+console.log(`\nCálculo del Círculo (A = π * r²):`);
+console.log(`Área: ${areaCirculo.toFixed(4)} unidades cuadradas.`);// .toFixed(4) limita los decimales
+    </script>
+</body>
+</html>

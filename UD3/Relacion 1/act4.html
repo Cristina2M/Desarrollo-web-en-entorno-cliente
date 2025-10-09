@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Actividad 4</title>
+</head>
+
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        const radioDelUsuario = 5; 
+        const radioAlternativo = 1.5; 
+
+
+        const volumen1 = calcularVolumenEsfera(radioDelUsuario);
+
+
+        console.log(`\nCálculo 1:`);
+        console.log(`Radio de la esfera: ${radioDelUsuario}`);
+        console.log(`Volumen calculado: ${volumen1.toFixed(4)} unidades cúbicas.`);// .toFixed(4) limita los decimales
+
+
+
+        const volumen2 = calcularVolumenEsfera(radioAlternativo);
+
+
+        console.log(`\nCálculo 2:`);
+        console.log(`Radio de la esfera: ${radioAlternativo}`);
+        console.log(`Volumen calculado: ${volumen2.toFixed(4)} unidades cúbicas.`);// .toFixed(4) limita los decimales
+    </script>
+</body>
+
+</html>
