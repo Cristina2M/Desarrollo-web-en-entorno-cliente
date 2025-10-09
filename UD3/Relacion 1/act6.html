@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1-Actividad 6</title>
+</head>
+<body>
+    <script src="funciones.js"></script>
+    <script>
+        // IMPORTANTE: En un entorno real, este archivo necesitaría una forma de 
+// acceder a 'potenciaRecursiva' (ej. si se exporta/importa, o si se carga después en HTML).
+// Aquí, asumimos que se cargan en el mismo contexto.
+
+// --------------------------------------------------------------------------
+// EJEMPLOS DE USO
+// --------------------------------------------------------------------------
+
+// Datos de prueba
+const base1 = 2;
+const exponente1 = 5; // 2^5 = 32
+
+const base2 = 10;
+const exponente2 = -3; // 10^-3 = 0.001
+
+const base3 = 7;
+const exponente3 = 0; // 7^0 = 1
+
+
+// 2 elevado a 5
+const resultado1 = potenciaRecursiva(base1, exponente1);
+console.log(`\n${base1} elevado a ${exponente1} es: ${resultado1}`);
+
+// 10 elevado a 3
+const resultado2 = potenciaRecursiva(base2, exponente2);
+console.log(`${base2} elevado a ${exponente2} es: ${resultado2}`);
+
+// 7 elevado a 0 (Caso Base)
+const resultado3 = potenciaRecursiva(base3, exponente3);
+console.log(`${base3} elevado a ${exponente3} es: ${resultado3}`); // Resultado: 1
+    </script>
+</body>
+</html>
