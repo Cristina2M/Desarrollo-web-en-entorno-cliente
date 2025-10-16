@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+
+<body>
+    <script>
+        function createTreasureMap(size = 5) {
+            const map = Array.from({ length: size }, () => Array(size).fill(0));
+
+            for (let r = 0; r < size; r++) {
+                for (let c = 0; c < size; c++) {
+                    let nextRow = Math.floor(Math.random() * size) + 1;
+                    let nextCol = Math.floor(Math.random() * size) + 1;
+                    map[r][c] = nextRow * 10 + nextCol;
+                }
+            }
+
+            const treasureRow = Math.floor(Math.random() * size);
+            const treasureCol = Math.floor(Math.random() * size);
+            map[treasureRow][treasureCol] = (treasureRow + 1) * 10 + (treasureCol + 1);
+
+            return map;
+        }
+
+        const randomMap = createTreasureMap(5);
+        console.table(randomMap);
+    </script>
+</body>
+</html>

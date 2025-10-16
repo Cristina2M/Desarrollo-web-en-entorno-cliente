@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda del tesoro</title>
+</head>
+
+<body>
+    <h2>Búsqueda del tesoro</h2>
+    <h4>Comienza en la primera casilla arriba a la izquierda. El primer dígito es la fila y el segundo la columna</h4>
+    <script>
+        //1º numero es la fila y el 2º numero es la columna, ej 25: fila 2 columna 5
+        //Tengo que hacer un array bidimensional de 5x5
+        let arLinea1 = new Array;
+        let arLinea2 = new Array;
+        let arLinea3 = new Array;
+        let arLinea4 = new Array;
+        let arLinea5 = new Array;
+        let arTabla = [arLinea1, arLinea2, arLinea3, arLinea4, arLinea5];
+        arLinea1[0]=32;
+        arLinea1[2]=53;
+        arLinea3[1]=13;
+        arLinea3[3]=34;
+        arLinea5[2]=34;
+
+        for (let i = 0; i < arTabla.length; i++) {
+            for (let f = 0; f < 5; f++) {
+                let linea = Math.floor(Math.random() * 5) + 1;
+                let columna = Math.floor(Math.random() * 5) + 1;
+                let numero = "" + linea + columna;
+                if (arTabla[i][f]==="" ||arTabla[i][f]===null||arTabla[i][f]===undefined) {
+                    arTabla[i][f] = numero;
+                }
+            }
+        }
+
+
+        // let arLinea12 = [34, 21, 32, 41, 25];
+        // let arLinea22 = [14, 42, 43, 14, 31];
+        // let arLinea32 = [54, 45, 52, 42, 23];
+        // let arLinea42 = [33, 15, 51, 31, 35];
+        // let arLinea52 = [21, 52, 33, 13, 23];
+        // let arTabla2 = [arLinea12, arLinea22, arLinea32, arLinea42, arLinea52];
+
+        document.write("+-----------------------+ <br>");
+        for (let i = 0; i < arTabla.length; i++) {
+            document.write("| ");
+            for (let f = 0; f < 5; f++) {
+                document.write(arTabla[i][f] + " | ");
+                if (f == 4) {
+                    document.write("<br> +-----------------------+ <br>");
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+</head>
+
+<body>
+    <script>
+        const map = [
+            [34, 21, 32, 41, 25],
+            [14, 42, 43, 14, 31],
+            [54, 45, 52, 42, 23],
+            [33, 15, 51, 31, 35],
+            [21, 52, 33, 13, 23]
+        ];
+
+        let row = 0, col = 0;
+        const visited = [];
+
+        while (true) {
+            const value = map[row][col];
+            visited.push([row + 1, col + 1]);
+
+            const nextRow = Math.floor(value / 10) - 1;
+            const nextCol = value % 10 - 1;
+
+            if (nextRow === row && nextCol === col) {
+                console.log("Treasure found at:", [row + 1, col + 1]);
+                console.log("Visited path:", visited);
+                break;
+            }
+
+            row = nextRow;
+            col = nextCol;
+        }
+    </script>
+</body>
+
+</html>
