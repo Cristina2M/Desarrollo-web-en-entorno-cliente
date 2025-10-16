@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+</head>
+
+<body>
+
+    <script>
+        const matrix = [
+            [3, 8, 7, 5, 9],
+            [4, 6, 2, 1, 10],
+            [9, 3, 5, 7, 4],
+            [6, 2, 8, 4, 3],
+            [5, 9, 6, 8, 2]
+        ];
+
+        let saddlePoints = [];
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                const value = matrix[i][j];
+                const rowMax = Math.max(...matrix[i]);
+                const colMin = Math.min(...matrix.map(r => r[j]));
+                if (value === rowMax && value === colMin) {
+                    saddlePoints.push([i + 1, j + 1]);
+                }
+            }
+        }
+
+        if (saddlePoints.length > 0)
+            console.log("Saddle points at:", saddlePoints);
+        else
+            console.log("No saddle points found");
+    </script>
+</body>
+
+</html>

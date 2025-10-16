@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+
+<body>
+
+    <script>
+        const text = "If man was meant to stay on the ground god would have given us roots";
+
+        const cleanText = text.replace(/\s/g, "").toLowerCase();
+
+        const length = cleanText.length;
+        const rows = Math.ceil(Math.sqrt(length));
+        const cols = Math.ceil(length / rows);
+
+        const matrix = [];
+        for (let i = 0; i < length; i += cols) {
+            matrix.push(cleanText.slice(i, i + cols));
+        }
+
+        let encoded = "";
+        for (let c = 0; c < cols; c++) {
+            for (let r = 0; r < rows; r++) {
+                if (matrix[r] && matrix[r][c]) encoded += matrix[r][c];
+            }
+            encoded += " ";
+        }
+
+        console.log("Original:", text);
+        console.log("Encoded:", encoded.trim());
+    </script>
+</body>
+
+</html>
