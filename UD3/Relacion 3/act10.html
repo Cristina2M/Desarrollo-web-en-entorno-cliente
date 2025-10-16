@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 10</title>
+</head>
+<body>
+  <script>
+    const asientos = new Array(10).fill(false);
+
+    function reservarAsiento(tipo) {
+      let inicio = tipo === "First" ? 0 : 5;
+      let fin = tipo === "First" ? 5 : 10;
+
+      for (let i = inicio; i < fin; i++) {
+        if (!asientos[i]) {
+          asientos[i] = true;
+          alert(`Asiento reservado:\nClase: ${tipo}\nNúmero: ${i + 1}`);
+          return;
+        }
+      }
+      alert(`No hay asientos disponibles en clase ${tipo}.`);
+    }
+
+    reservarAsiento(prompt("¿Qué tipo de asiento desea? (First/Turista)"));
+    console.log(asientos);
+  </script>
+</body>
+</html>

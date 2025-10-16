@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 11</title>
+</head>
+<body>
+  <script>
+    const vendedores = 4;
+    const productos = 5;
+    const ventas = Array.from({ length: vendedores }, () => Array(productos).fill(0));
+
+    // Simulamos ventas aleatorias del mes
+    for (let i = 0; i < 100; i++) {
+      const v = Math.floor(Math.random() * vendedores);
+      const p = Math.floor(Math.random() * productos);
+      const valor = Math.floor(Math.random() * 1000);
+      ventas[v][p] += valor;
+    }
+
+    // Mostrar resultados en tabla
+    document.write("<table border='1' cellpadding='5'>");
+    document.write("<tr><th>Producto\\Vendedor</th>");
+    for (let v = 1; v <= vendedores; v++) document.write(`<th>Vendedor ${v}</th>`);
+    document.write("<th>Total Producto</th></tr>");
+
+    for (let p = 0; p < productos; p++) {
+      let totalProducto = 0;
+      document.write(`<tr><th>Producto ${p + 1}</th>`);
+      for (let v = 0; v < vendedores; v++) {
+        document.write(`<td>${ventas[v][p]}</td>`);
+        totalProducto += ventas[v][p];
+      }
+      document.write(`<td><b>${totalProducto}</b></td></tr>`);
+    }
+
+    // Totales por vendedor
+    document.write("<tr><th>Total Vendedor</th>");
+    let totalGeneral = 0;
+    for (let v = 0; v < vendedores; v++) {
+      const totalVendedor = ventas[v].reduce((a, b) => a + b, 0);
+      totalGeneral += totalVendedor;
+      document.write(`<td><b>${totalVendedor}</b></td>`);
+    }
+    document.write(`<td><b>${totalGeneral}</b></td></tr>`);
+    document.write("</table>");
+  </script>
+</body>
+</html>
