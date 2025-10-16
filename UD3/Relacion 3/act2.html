@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+  <script>
+    const clase = [
+      ["Ángel García", 20, 6, 7, 10],
+      ["Lucía Pérez", 19, 8, 9, 7],
+      ["Carlos Ruiz", 21, 5, 6, 8],
+      ["María López", 20, 9, 8, 10]
+    ];
+
+    function obtenerNota(numEstudiante, trimestre) {
+      const estudiante = clase[numEstudiante];
+      if (!estudiante) return "Estudiante no encontrado.";
+
+      if (trimestre === undefined) {
+        const media = (estudiante[2] + estudiante[3] + estudiante[4]) / 3;
+        return `${estudiante[0]} tiene de media un ${media.toFixed(2)}.`;
+      } else {
+        if (trimestre < 1 || trimestre > 3) return "Trimestre inválido.";
+        return `${estudiante[0]} tiene un ${estudiante[1 + trimestre]} en el ${trimestre}º trimestre.`;
+      }
+    }
+
+    console.log(obtenerNota(0, 2));
+    console.log(obtenerNota(1)); 
+  </script>
+</body>
+</html>
