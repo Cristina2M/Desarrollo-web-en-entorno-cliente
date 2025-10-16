@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+<body>
+  <script>
+    const vendedores = [];
+
+    function altaVendedor(nombre, ventas) {
+      const sueldo = 200 + ventas * 0.09;
+      vendedores.push({ nombre, ventas, sueldo });
+    }
+
+    altaVendedor("Ana", 5000);
+    altaVendedor("Luis", 3000);
+    altaVendedor("Marta", 7000);
+
+    console.table(vendedores);
+  </script>
+</body>
+</html>

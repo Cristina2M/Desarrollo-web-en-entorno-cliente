@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+<body>
+  <script>
+    const clase = [
+      ["Ángel García", 20, 6, 7, 10],
+      ["Lucía Pérez", 19, 8, 9, 7],
+      ["Carlos Ruiz", 21, 5, 6, 8],
+      ["María López", 20, 9, 8, 10]
+    ];
+
+    function alumnoAleatorio() {
+      const index = Math.floor(Math.random() * clase.length);
+      return clase[index][0];
+    }
+
+    console.log("Alumno elegido aleatoriamente:", alumnoAleatorio());
+  </script>
+</body>
+</html>

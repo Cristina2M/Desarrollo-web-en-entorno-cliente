@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+</head>
+<body>
+  <script>
+    function paresImpares() {
+      let numeros = [];
+      for (let i = 0; i < 100; i++) {
+        numeros.push(Math.floor(Math.random() * 1000) + 1);
+      }
+      console.log("Array original:", numeros);
+
+      const pares = numeros.filter(n => n % 2 === 0);
+      const impares = numeros.filter(n => n % 2 !== 0);
+
+      const resultado = pares.concat(impares);
+      console.log("Array organizado por pares e impares:", resultado);
+    }
+
+    paresImpares();
+  </script>
+</body>
+</html>
