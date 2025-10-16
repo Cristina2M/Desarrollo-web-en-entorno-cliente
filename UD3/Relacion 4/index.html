@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relación 4</title>
+</head>
+<body>
+  <script type="module">
+    import {
+      filterNumbersGreaterThan,
+      toHackerSpeak,
+      getFileExtension,
+      flatArray,
+      removeDuplicates,
+      countLetter,
+      removeWords
+    } from './modAuxiliar.js';
+
+    console.log("=== filterNumbersGreaterThan ===");
+    console.log(filterNumbersGreaterThan([3, 8, 12, 1, 7, 4], 7)); // [3,1,4]
+
+    console.log("=== toHackerSpeak ===");
+    console.log(toHackerSpeak("I'm a hacker now")); // 1'm 4 h4ck3r n0w
+
+    console.log("=== getFileExtension ===");
+    console.log(getFileExtension("imagen.jpg")); // "jpg"
+
+    console.log("=== flatArray ===");
+    console.log(flatArray([[1, 5, 4], [3, 10], [2, 5]])); // [1,5,4,3,10,2,5]
+
+    console.log("=== removeDuplicates ===");
+    console.log(removeDuplicates([4, 5, 10, 4, 10, 2])); // [4,5,10,2]
+
+    console.log("=== countLetter ===");
+    console.log(countLetter("a", "javascript")); // 2
+
+    console.log("=== removeWords ===");
+    console.log(removeWords("This is a really bad test", ["really", "bad"])); // "This is a test"
+  </script>
+</body>
+</html>
