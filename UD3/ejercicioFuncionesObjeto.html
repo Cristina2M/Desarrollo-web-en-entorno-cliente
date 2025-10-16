@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const articulo= [
+            {
+                codigo: 1,
+                nombre: "Zapato",
+                precio: 15
+            },{
+                codigo: 2,
+                nombre: "Camisa",
+                precio: 20
+            },{
+                codigo: 3,
+                nombre: "Pantalón",
+                precio: 10
+            },{
+                codigo: 4,
+                nombre: "Gorra",
+                precio: 5
+            },{
+                codigo: 5,
+                nombre: "Chaqueta",
+                precio: 35
+            },{
+                muestraHTML: function(){
+                    for (let i = 0; i < articulo.length-1; i++) {
+                        const art = articulo[i];
+                        console.log("Código: "+art.codigo+", Nombre: "+art.nombre+", Precio: "+art.precio+"<br>");
+                    }
+                }
+            },{
+                pvp: function(){
+                    let precioIVA=this.precio = precio*0.21;
+                    return precioIVA
+                }
+            },{
+                dto: function(){
+                    return this.precio = precio*0.05
+                }
+            }
+        ];
+        //encuentra(codigo)
+        encuentra(5);
+            function encuentra(numero){
+                for (let i = 0; i < articulo.length; i++) {
+                    const art = articulo[i];
+                    if (art.codigo==numero) {
+                        return console.log("Código: "+art.codigo+", Nombre: "+art.nombre+", Precio: "+art.precio);
+                    }
+                }
+            }
+
+            function encuentra2(ar, codigo) {
+                return ar.find(elemento => elemento.codigo == codigo);
+            }
+
+        //ordenaNombre
+        //ordenaPrecio
+        //filtra(minValor)
+
+    </script>
+</body>
+</html>
