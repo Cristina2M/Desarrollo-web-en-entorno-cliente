@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+
+<body>
+    <script>
+        const names = [
+            "John Smith",
+            "Jane Doe",
+            "Alice Johnson",
+            "James Brown",
+            "Carlos Ruiz",
+            "Julia Roberts"
+        ];
+
+        const result = names
+            .filter(n => n[0].toUpperCase() === "J")      
+            .map(n => n.split(" ").map(p => p[0]).join(".")) 
+            .sort();
+
+        console.log("Iniciales que empiezan con J:", result);
+    </script>
+</body>
+
+</html>

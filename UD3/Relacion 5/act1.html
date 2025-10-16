@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [3, 8, 12, 5, 7, 1, 9];
+        const strings = ["gato", "tigre", "león", "elefante", "perro"];
+        const words = ["Este", "a", "un", "simple", "test", "prueba"];
+
+
+        const largest = Math.max(...numbers);
+        console.log("Largest number:", largest);
+
+
+        const longest = strings.reduce((a, b) => a.length > b.length ? a : b);
+        console.log("Longest string:", longest);
+
+
+        const even = numbers.filter(n => n % 2 === 0);
+        console.log("Even numbers:", even);
+
+
+        const odd = numbers.filter(n => n % 2 !== 0);
+        console.log("Odd numbers:", odd);
+
+
+        const containsIs = words.filter(w => w.toLowerCase().includes("is"));
+        console.log("Words that contain 'is':", containsIs);
+
+
+        const allDivBy3 = numbers.every(n => n % 3 === 0);
+        console.log("All divisible by 3?", allDivBy3);
+
+
+        const arr1 = [1, 2, 3];
+        const arr2 = ["a", "b", "c"];
+        const zipped = arr1.map((v, i) => [v, arr2[i]]);
+        console.log("Zipped:", zipped);
+
+
+        const joined = arr1.concat(numbers);
+        const sorted = joined.sort((a, b) => a - b);
+        console.log("Sorted joined array:", sorted);
+
+
+        const removedFirst = words.slice(1);
+        console.log("After removing first:", removedFirst);
+
+
+        const newWord = ["Hello", ...words];
+        console.log("New word at start:", newWord);
+
+        
+        const replaced = [...words];
+        replaced.splice(2, 2, "amazing", "exercise");
+        console.log("After replacing elements:", replaced);
+    </script>
+</body>
+
+</html>
