@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+  <script>
+    let arr = new Array(10).fill(0);
+
+    function sumarUno() {
+      arr = arr.map(x => x + 1);
+    }
+
+    function mostrarArray() {
+      console.log(arr.join(" "));
+    }
+
+    console.log("Array inicial:");
+    mostrarArray();
+
+    sumarUno();
+    console.log("Array tras sumar 1:");
+    mostrarArray();
+  </script>
+</body>
+</html>
