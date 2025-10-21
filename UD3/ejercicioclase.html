@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de clase</title>
+</head>
+
+<body>
+    <script>
+
+        function iniciarFactura() {
+
+            class Cliente {
+                constructor(nif, nombre, direccion, telefono, email) {
+                    this.nif = nif,
+                        this.nombre = nombre,
+                        this.direccion = direccion,
+                        this.telefono = telefono,
+                        this.email = email
+                }
+            }
+
+            class Articulo {
+                constructor(codigo, nombre, precio) {
+                    this.codigo = codigo,
+                        this.nombre = nombre,
+                        this.precio = precio
+                }
+                get pvp() {
+                    return this.precio * 0.2
+                }
+            }
+
+
+            class Albaran {
+                constructor(cliente, numeroAlb, fecha, lineas) {
+                    this.cliente = cliente,
+                        this.numeroAlb = numeroAlb,
+                        this.fecha = fecha,
+                        this.lineas = lineas
+                }
+                show() {
+                    console.log("Cliente: " + this.cliente + " Numero de albarán: " + this.numeroAlb + " Fecha: " + this.fecha + " Articulo1: " + this.lineas[0].nombre + " Articulo2: " + this.lineas[1].nombre)
+                }
+                addArticulo(articulo) {
+                    this.lineas.push(articulo);
+                }
+                get total() {
+                    let ptotal = 0;
+                    for (let i = 0; i < this.lineas.length; i++) {
+                        ptotal += this.lineas[i].pvp;
+                        return ptotal
+                    }
+                }
+            }
+
+            function crearAlbaran(numeroAlb, fecha) {
+                const cliente1 = new Cliente(1234, "Zara", "Granada", "958234567", "zara@email.com")
+                const articulo1 = new Articulo(1, "pantalón", 15)
+                const articulo2 = new Articulo(2, "camiseta", 10)
+                const lineas = [articulo1, articulo2]
+                return new Albaran(cliente1, numeroAlb, fecha, lineas)
+            }
+
+
+            const miAlbaran = crearAlbaran(876, "2025/10/17");
+            miAlbaran.show();
+
+        }
+
+        const alb = iniciarFactura();
+    </script>
+</body>
+</html>
