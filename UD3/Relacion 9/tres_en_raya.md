@@ -53,3 +53,14 @@ Clase TresEnRaya
 ---
 
 
+## Explicación lógica:
+
+- El **constructor** inicializa el tablero vacío, elige el primer jugador y prepara los contadores.
+- El método `jugar(fila, columna)` controla los turnos y verifica la validez del movimiento, comprueba si alguien ganó o si hay que cambiar de jugador.
+- `cambiarTurno()` alterna entre 'X' y 'O'.
+- `comprobarGanador()` revisa si hay tres marcas iguales en línea.
+- `esEmpate()` detecta cuándo el tablero está lleno sin ganador.
+- `dibujar()` imprime el tablero actual para pruebas y visualización.
+
+
+

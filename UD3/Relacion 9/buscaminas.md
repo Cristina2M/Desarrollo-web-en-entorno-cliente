@@ -60,3 +60,16 @@ Clase Buscaminas
         Contar minas entre las 8 casillas vecinas
 ```
 
+
+---
+
+## Explicación lógica:
+
+- El **constructor** genera el tablero 8x8, coloca minas y establece el tiempo y contadores iniciales.
+- `descubrir(fila, columna)` gestiona la lógica principal al abrir una casilla: perder, ganar, descubrir vacíos recursivamente o mostrar el número de minas.
+- `marcarMina()` permite poner banderas para marcar posibles minas.
+- `dibujar()` imprime el estado actual para visualización y depuración.
+- `haSuperadoTiempoLimite()` controla si el usuario se ha pasado del tiempo máximo fijado.
+- `minasAlrededor()` devuelve cuántas minas rodean una casilla concreta.
+
+

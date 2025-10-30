@@ -47,3 +47,15 @@ Clase Puzzle
         tiempoFin = tiempo actual
         devolver tiempoFin - tiempoInicio
 ```
+
+
+---
+
+## Explicación lógica:
+
+- El **constructor** prepara el tablero con piezas y hueco, lo mezcla aleatoriamente y pone los contadores a cero.
+- El método `mover(direccion)` intenta mover el hueco en la dirección indicada si es válido, y actualiza el número de movimientos.
+- `esMovimientoValido()` verifica que el hueco no salga de los límites del tablero.
+- `dibujar()` imprime el tablero en la consola (útil para pruebas y depuración).
+- `haGanado()` permite comprobar si el puzzle está ordenado correctamente.
+- `obtenerTiempo()` da el tiempo total desde que empezó la partida.
