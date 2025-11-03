@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Sumar Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            font-size: 16px;
+        }
+        .info {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 3: Sumar Array</h1>
+        
+        <div class="info">
+            <strong>Instrucciones:</strong> Introduce números separados por comas (ejemplo: 1,2,3,4,5)
+        </div>
+        
+        <input type="text" id="numeros" placeholder="Ej: 1,2,3,4,5" value="1,2,3,4,5">
+        
+        <br>
+        <button onclick="calcularSuma()">Calcular Suma</button>
+        <button onclick="ejemploPredefinido()">Ejemplo Predefinido</button>
+        
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script src="FuncionesArrow.js"></script>
+    <script>
+        function calcularSuma() {
+            let input = document.getElementById('numeros').value;
+            let numeros = input.split(',').map(num => parseInt(num.trim()));
+            
+            if (numeros.every(n => !isNaN(n))) {
+                let suma = sumArray(numeros);
+                document.getElementById('resultado').innerHTML = 
+                    '<strong>Array:</strong> [' + numeros.join(', ') + ']<br>' +
+                    '<strong>Suma total:</strong> ' + suma;
+            } else {
+                alert('Por favor, introduce solo números separados por comas');
+            }
+        }
+
+        function ejemploPredefinido() {
+            // Ejemplo con números aleatorios
+            let ejemplo = [10, 20, 30, 40, 50];
+            let suma = sumArray(ejemplo);
+            document.getElementById('resultado').innerHTML = 
+                '<strong>Array de ejemplo:</strong> [' + ejemplo.join(', ') + ']<br>' +
+                '<strong>Suma total:</strong> ' + suma;
+            document.getElementById('numeros').value = ejemplo.join(',');
+        }
+    </script>
+</body>
+</html>
+

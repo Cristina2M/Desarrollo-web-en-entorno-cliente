@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 1</h1>
+        
+        <h2>Prueba la función sum():</h2>
+        <button onclick="probarSuma()">Sumar 40 + 2</button>
+        <button onclick="probarSuma2()">Sumar 42 + 0</button>
+        <div class="result" id="resultSuma"></div>
+        
+        <h2>Prueba la función stringLength():</h2>
+        <button onclick="probarLongitud()">Ver longitud de la palabra más larga</button>
+        <div class="result" id="resultLongitud"></div>
+        
+        <h2>Prueba la función showAlert():</h2>
+        <button onclick="probarAlerta()">Mostrar Alerta Aleatoria</button>
+    </div>
+
+    <script src="FuncionesArrow.js"></script>
+    <script>
+        function probarSuma() {
+            let resultado = sum(40, 2);
+            document.getElementById('resultSuma').innerHTML = 
+                '<strong>Resultado de sum(40, 2):</strong> ' + resultado;
+        }
+
+        function probarSuma2() {
+            let resultado = sum(42, 0);
+            document.getElementById('resultSuma').innerHTML = 
+                '<strong>Resultado de sum(42, 0):</strong> ' + resultado;
+        }
+
+        function probarLongitud() {
+            let longestCityNameInTheWorld = "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu";
+            stringLength(longestCityNameInTheWorld);
+            document.getElementById('resultLongitud').innerHTML = 
+                '<strong>Resultado:</strong> Está en la consola del navegador';
+        }
+
+        function probarAlerta() {
+            showAlert("you ball of fluff");
+        }
+    </script>
+</body>
+</html>
+
