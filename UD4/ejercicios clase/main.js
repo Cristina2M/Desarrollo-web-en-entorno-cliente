@@ -8,7 +8,7 @@ const inicializaEventos = () => {
 
 const eventosDiv=() => {
     document.getElementById("div1").addEventListener("mouseover", (event)=> {
-        document.getElementById("div1").style.backgroundColor = 'green';
+        document.getElementById("div1").style.backgroundColor = 'green'; //color al que quiero que cambie
         document.getElementById("div1").textContent = `(${event.pageX},${event.pageY})`;
         // console.log('Objeto evento: ', event);
         console.log(`--- Evento: ${event.type} en div ${event.target.id} ---`);
