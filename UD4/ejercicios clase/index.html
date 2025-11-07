@@ -4,47 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boton que cambia el fondo</title>
+    <title>DOM</title>
+    <style>
+        #contenedor {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border: 2px solid #0056b3;
+            background-color: #f0f8ff;
+        }
+
+        #contenedor>div {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            flex-basis: 18%;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
 
 
-    <button id="btn1">Cambiar el color de fondo</button>
+    <button id="btn1">Pulsa</button>
+
+    <div id="contenedor">
+        <div id="div1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
 
 
-    <!-- <script>
-        const btn = document.querySelector("button");
-
-        function random(number) {
-            return Math.floor(Math.random() * (number + 1));
-        }
-
-        btn.addEventListener("click", () => {
-            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-            document.body.style.backgroundColor = rndCol;
-        });
-    </script> -->
-
-
-
-    <script>
-        const inicializaEventos=()=>{
-            console.log("Eventos inicializados")
-            document.getElementById("btn1").addEventListener("click", ()=> {
-                alert("Has pulsado el boton");
-            });
-            buton.onclick
-        }
-
-
-
-        (function () {
-            inicializaEventos();
-        })()
-    </script>
-
+    <script type="module" src="main.js"></script>
 
 
 </body>
+
 </html>
