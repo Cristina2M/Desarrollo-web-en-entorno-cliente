@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Texto con JavaScript</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            margin: 20px; 
+        }
+        
+        h2 { 
+            margin-top: 30px; 
+            border-bottom: 2px solid #ccc; 
+            padding-bottom: 5px; 
+        }
+
+        .botones-texto button { 
+            margin: 5px; 
+            padding: 8px 15px; 
+            cursor: pointer; 
+            background-color: #f0f0f0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+
+        /* Estilo inicial y clave para el área de texto */
+        #area-texto { 
+            font-size: 16px; /* Tamaño por defecto (16px) */
+            line-height: 1.5; 
+            padding: 15px; 
+            border: 1px solid #000;
+            margin-top: 20px;
+            /* La alineación por defecto de HTML es 'left', pero la establecemos para tener un punto de partida */
+            text-align: left; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Funcionalidades de Modificación de Texto</h1>
+
+    <h2>Controles de Apariencia</h2>
+
+    <div class="botones-texto">
+        <h3>Tamaño de Fuente:</h3>
+        <button onclick="incrementarFuente()">➕ Aumentar</button>
+        <button onclick="decrementarFuente()">➖ Disminuir</button>
+        <button onclick="resetFuente()">↩️ Tamaño por Defecto</button>
+
+        <h3>Alineación del Texto:</h3>
+        <button onclick="cambiarAlineacion('justify')">Justificada</button>
+        <button onclick="cambiarAlineacion('left')">Izquierda</button>
+    </div>
+
+    <hr>
+
+    <div id="area-texto">
+        <p>Este es el **primer párrafo** que se modificará con JavaScript. Podemos cambiar su tamaño y alineación según los botones superiores.</p>
+        <p>Este es el **segundo párrafo**. Debe ser posible incrementar o decrementar la fuente usada, así como volver al tamaño por defecto, tal como se solicita en el ejercicio.</p>
+        <p>Este es el **tercer párrafo**. Es fundamental que el diseño se realice mediante funciones independientes para implementar cada una de esas funcionalidades, valorando el correcto diseño del código.</p>
+        <p>Finalmente, este es el **cuarto párrafo**, asegurando que la página contenga el mínimo de cuatro párrafos requerido para demostrar el funcionamiento de los estilos aplicados.</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
