@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Validación de Usuario en Tiempo Real</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f7a4a4;
+            /* Tono salmón del fondo */
+            font-family: Arial, sans-serif;
+        }
+
+        .validation-box {
+            background-color: #c96767;
+            /* Color de fondo del cuadro */
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        #username {
+            width: 90%;
+            padding: 5px 0;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            font-size: 1.2em;
+            text-align: center;
+            outline: none;
+            color: #333;
+        }
+
+        #username::placeholder {
+            color: rgba(78, 38, 38, 0.6);
+        }
+
+        .requirement-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            color: #333;
+            /* Texto de la lista en blanco */
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .requirement-list li {
+            margin: 5px 0;
+        }
+
+        .hidden-req {
+            display: none !important;
+        }
+
+        .submit-button {
+            margin-top: 25px;
+            background-color: #fff;
+            color: #f7a4a4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <div class="validation-box">
+        <h2 style="color: #333; margin-bottom: 5px;">username</h2>
+
+        <input type="text" id="username" placeholder="Escribe aquí">
+
+        <ul class="requirement-list">
+            <li id="reqLower">1 lower case character</li>
+            <li id="reqUpper">1 uppercase character</li>
+            <li id="reqLength">8 minimum characters</li>
+        </ul>
+
+        <button class="submit-button">Sign Up</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

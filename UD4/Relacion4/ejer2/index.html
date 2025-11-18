@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Formulario de Registro</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f2f5; padding: 20px; }
+        .form-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 20px auto; }
+        h2 { text-align: center; color: #333; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Asegura que el padding no cambie el ancho total */
+        }
+        .validation-message {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; border: 2px solid red !important; } /* Resaltar campos incorrectos */
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>👤 Registro de Usuario</h2>
+        <form id="registroForm">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" onblur="validarCampo(this, validarLetras)">
+                <p id="nombreMsg" class="validation-message"></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" onblur="validarCampo(this, validarLetras)">
+                <p id="apellidosMsg" class="validation-message"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="dni">DNI/NIE:</label>
+                <input type="text" id="dni" name="dni" placeholder="Ej: 12345678A" onblur="validarCampo(this, validarDNI)">
+                <p id="dniMsg" class="validation-message"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 600123456" onblur="validarCampo(this, validarTelefono)">
+                <p id="telefonoMsg" class="validation-message"></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ej: correo@dominio.com" onblur="validarCampo(this, validarCorreo)">
+                <p id="emailMsg" class="validation-message"></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Mínimo 8 caracteres, debe tener número y puntuación" onblur="validarCampo(this, validarNombreUsuario)">
+                <p id="usernameMsg" class="validation-message"></p>
+            </div>
+
+            <button type="submit">Registrar</button>
+            
+        </form>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
