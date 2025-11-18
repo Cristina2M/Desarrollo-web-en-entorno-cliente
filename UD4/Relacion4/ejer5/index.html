@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Formulario Tarjeta de Crédito</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Fondo azul muy claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card-form-container {
+            width: 400px;
+            position: relative;
+            padding-top: 100px; /* Espacio para la tarjeta flotante */
+        }
+
+        /* La Tarjeta (Elemento Flotante) */
+        .credit-card {
+            background: linear-gradient(135deg, #1e3a8a, #0b0c15); /* Diseño oscuro, similar a VISA */
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            width: 80%;
+            height: 180px;
+            position: absolute;
+            top: -50px; /* Sube la tarjeta por encima del formulario */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        /* Contenido de la Tarjeta */
+        .card-chip {
+            width: 40px;
+            height: 30px;
+            background-color: #ffd700;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .card-number-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            margin-right: 20px;
+        }
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        .card-holder, .card-expiry {
+            line-height: 1.4;
+        }
+        .card-expiry span {
+            font-size: 1.2em;
+        }
+        .logo-visa {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* El Formulario Base */
+        .form-area {
+            background-color: white;
+            padding: 100px 30px 30px; /* Padding superior para que la tarjeta quede encima */
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #007bff;
+        }
+
+        .expiry-row {
+            display: flex;
+            gap: 10px;
+        }
+        .expiry-row div {
+            flex: 1;
+        }
+        
+        /* Resaltado de campos inválidos */
+        .incorrect {
+            border-color: red !important;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-form-container">
+        <div class="credit-card">
+            <div class="logo-visa">VISA</div>
+            <div class="card-number-display" id="cardDisplayNumber">#### #### #### ####</div>
+            <div class="card-info">
+                <div class="card-holder">
+                    <small>Card Holder</small>
+                    <div id="cardDisplayName">FULL NAME</div>
+                </div>
+                <div class="card-expiry">
+                    <small>Expires</small>
+                    <span id="cardDisplayExpiry">MM/YY</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area">
+            <form id="creditCardForm">
+                
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" oninput="updateCardVisuals(this)">
+                </div>
+
+                <div class="form-group">
+                    <label for="cardHolder">Card Holder</label>
+                    <input type="text" id="cardHolder" placeholder="FULL NAME" oninput="updateCardVisuals(this)">
+                </div>
+                
+                <div class="expiry-row">
+                    <div class="form-group">
+                        <label for="expiryMonth">Expiration Date</label>
+                        <div class="expiry-row">
+                            <select id="expiryMonth" onchange="updateCardVisuals()">
+                                <option value="">Month</option>
+                                <script>
+                                    // Genera opciones de mes (01 a 12)
+                                    for(let i=1; i<=12; i++) {
+                                        const month = String(i).padStart(2, '0');
+                                        document.write(`<option value="${month}">${month}</option>`);
+                                    }
+                                </script>
+                            </select>
+                            <select id="expiryYear" onchange="updateCardVisuals()">
+                                <option value="">Year</option>
+                                <script>
+                                    // Genera opciones de año (próximos 10 años)
+                                    const currentYear = new Date().getFullYear();
+                                    for(let i=0; i<10; i++) {
+                                        const year = currentYear + i;
+                                        document.write(`<option value="${String(year).slice(2)}">${year}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="4">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
