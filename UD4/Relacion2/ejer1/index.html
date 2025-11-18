@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Temas Dinámicos con JavaScript</title>
+    
+    <link rel="stylesheet" id="tema-css" href="normal.css"> 
+
+    <style>
+        /* Estilos básicos para la presentación */
+        body { font-family: sans-serif; margin: 20px; transition: background-color 0.3s; }
+        .botones-tema a { margin-right: 15px; cursor: pointer; text-decoration: underline; color: blue; }
+        #contenido { padding: 15px; margin-top: 20px; transition: all 0.3s; }
+        #marco { padding: 8px; border: 1px solid #000; margin-top: 10px; transition: background-color 0.3s; }
+        #parrafo-ocultable { transition: opacity 0.3s; }
+    </style>
+</head>
+<body>
+
+    <h1>Creando temas con CSS y JavaScript</h1>
+
+    <div class="botones-tema">
+        <h3>Opción a) (Modificando Style):</h3>
+        <a onclick="cambiarTema_style('normal')">Tema Normal (Style)</a>
+        <a onclick="cambiarTema_style('minimalista')">Tema Minimalista (Style)</a>
+        
+        <hr>
+        
+        <h3>Opción b) (Hojas de Estilo Dinámicas):</h3>
+        <a onclick="cambiarTema_link('normal')">Tema Normal (Link)</a>
+        <a onclick="cambiarTema_link('minimalista')">Tema Minimalista (Link)</a>
+    </div>
+
+    <hr>
+
+    <h2 id="titulo-tema">Tema Actual</h2>
+    <h3>Página de ejemplo</h3>
+
+    <div id="contenido">
+        <p>En esta página vamos a comprobar lo fácil que es aplicar estilos mediante CSS a un documento seleccionado.</p>
+        <p>Lo ideal es que al seleccionar un estilo éste permanezca siempre igual para el usuario.</p>
+        
+        <p id="parrafo-ocultable">Utilizando CSS podemos incluso ocultar partes del sitio. Este párrafo debe ser solo visible en el tema Normal.</p>
+        
+        <div id="marco">Esto está dentro de un marco</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
