@@ -101,3 +101,5 @@ function alumnosActivos() {
         });
     }
 })();
+
+// falta por hacer que al hacer click en las tarjetitas de los estudiantes te salga la informacion de ellos
