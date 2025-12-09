@@ -1,3 +1,5 @@
+import { get } from './funciones.js'
+
 async function getFetch() {
     let response = await fetch ('https://fakestoreapi.com/products')
     console.log('response: ',response)
@@ -19,8 +21,12 @@ function getFetch_V2(){
             .catch(error => console.log('Error: ', error))
 }
 
+function getFetch_V3(url){
+    get(url).then(json=>console.log(json))
+}
+
 const mainPromesas = () =>{
-    getFetch_V2();
+    getFetch_V3('https://fakestoreapi.com/products');
 }
 
 
