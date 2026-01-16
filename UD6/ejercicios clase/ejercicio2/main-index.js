@@ -67,7 +67,8 @@ function card(objeto) {
 
     estilos(div, parrafo, imagen);
     div.addEventListener('click', () => {
-        mostrarDetallePersonaje(objeto);
+        carritoAdd(objeto); //OJO tengo que añadir al carrito el objeto al completo
+        carritoShow();
     });
 
     div.appendChild(imagen);
@@ -75,6 +76,42 @@ function card(objeto) {
     return div
 }
 
+const carritoAdd = (item) => {
+    console.log('Añadir al carrito',item);
+    let carrito=JSON.parse(sessionStorage.getItem('Carrito')) || []; //para poner un valor por defecto de un array
+    carrito.push(item);
+    sessionStorage.setItem('Carrito',JSON.stringify(carrito));
+    console.log('Carrito',carrito);
+}
+
+const carritoShow = () => {
+    // mostrar el contenido de la variable guardada en el sessionStorage
+    const carrito=JSON.parse(sessionStorage.getItem('Carrito')) || [];
+    
+    console.log('Ver carrito',carrito);
+    const divCarrito=document.getElementById('car');
+    divCarrito.innerHTML='';  
+    console.log('car',carrito);
+  
+    if (carrito.length===0){
+       
+        return;
+    }
+
+    //lo que se ve en la pagina:
+    const h2=document.createElement('H2');
+    h2.textContent=`Carrito (${carrito.length} items)`;
+    divCarrito.appendChild(h2);
+
+    carrito.forEach((item)=>{
+        const p=document.createElement('p');
+        p.textContent=`${item.name} - ${item.species}`;
+        divCarrito.appendChild(p);
+    });
+
+
+
+}
 
 
 // -----------------------------------------------
@@ -84,9 +121,12 @@ function main() {
 
     devuelvePersonajes();
 
+    carritoShow();
+
     if (!sessionStorage.getItem('Usuario')) {
         window.location.href = 'login.html';
     }
+
 }
 
 

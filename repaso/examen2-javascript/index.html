@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Javascript - Buscador de Películas</title>
+    <!-- 
+        COMENTARIOS DE FUNCIONAMIENTO:
+        1. Para ejecutar el servidor de datos (json-server), abra una terminal en la carpeta del proyecto y ejecute:
+           npx json-server peliculas.json
+        
+        2. Si no tiene json-server instalado, puede que necesite instalarlo globalmente primero (opcional, npx lo hace temporalmente):
+           npm install -g json-server
+
+        3. La aplicación intentará conectar a http://localhost:3000/peliculas.
+           Si falla, usará el archivo local de respaldo (simulado en el código).
+    -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importamos fuentes modernas para mejorar la estética -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Buscador de Películas</h1>
+            <div class="search-container">
+                <!-- Restricciones de búsqueda:
+                     - No empezar con número
+                     - No empezar con -, ;, $
+                     - No contener -, ;, ", @ en el cuerpo
+                -->
+                <input type="text" id="searchInput" placeholder="Buscar película...">
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <div class="filters">
+                <label for="filterYear">Filtrar por Año (>=):</label>
+                <input type="number" id="filterYear" placeholder="Ej: 2010">
+                <button id="btnFilterYear">Filtrar Año</button>
+
+                <label for="filterLang">Filtrar por Idioma:</label>
+                <select id="filterLang">
+                    <option value="">Todos</option>
+                    <option value="en">Inglés (en)</option>
+                    <option value="es">Español (es)</option>
+                    <option value="ko">Coreano (ko)</option>
+                </select>
+                <button id="btnFilterLang">Filtrar Idioma</button>
+            </div>
+        </header>
+
+        <main id="movieContainer" class="movie-grid">
+            <!-- Aquí se mostrarán las películas dinámicamente -->
+        </main>
+
+        <footer>
+            <div class="favorites-counter">
+                Películas favoritas guardadas: <span id="favCount">0</span>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

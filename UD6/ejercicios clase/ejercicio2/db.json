@@ -56,8 +56,8 @@
     },
     {
       "id": "55",
-      "name": "Cristina",
-      "email": "cristina@email.com",
+      "name": "cristina",
+      "email": "cristina",
       "enrollmentDate": "2024-10-01",
       "active": true,
       "level": "beginner"
