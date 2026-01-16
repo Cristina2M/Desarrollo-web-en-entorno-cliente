@@ -10,6 +10,7 @@ export default function ContadorBien() {
     <div>ContadorBien</div>
 
     <button onClick={()=> setContador(contador+1)}>Add {contador}</button>
+    <button onClick={()=> setContador(contador-1)}>Remove {contador}</button>
 
     </>
   )

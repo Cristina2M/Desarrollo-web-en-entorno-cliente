@@ -9,5 +9,6 @@ import PruebasProductos from './pages/PruebasProductos.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode> {/* es para hacer comprobaciones */}
     <Pruebas />
+    {/* <PruebasProductos /> */}
   </StrictMode>,
 )

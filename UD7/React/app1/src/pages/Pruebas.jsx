@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '../components/Grid'
 import ContadorBien from '../components/ContadorBien'
+import CarruselProductos from '../components/CarruselProductos'
 
 export default function Pruebas() {
   return (
@@ -14,7 +15,7 @@ export default function Pruebas() {
         </div> */}
 
         <div>
-          <ContadorBien />
+          <CarruselProductos />
         </div>
 
         
