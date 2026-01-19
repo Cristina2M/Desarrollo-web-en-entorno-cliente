@@ -5,7 +5,9 @@ export default function Navegador() {
   return (
     <>
     <NavLink to="/">Pruebas</NavLink> <br />
-    <NavLink to="/receta">Receta Pollo</NavLink>
+    <NavLink to="/receta">Receta Pollo</NavLink> <br />
+    <NavLink to="/productos">Card Productos</NavLink> <br />
+    <NavLink to="/detalle/:id">Detalle Productos</NavLink>
     </>
   )
 }

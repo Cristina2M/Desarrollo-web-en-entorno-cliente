@@ -3,6 +3,8 @@ import Pruebas from './pages/Pruebas';
 import Receta from './components/Receta';
 import RecetaPage from './pages/RecetaPage';
 import { Route, Routes } from 'react-router';
+import ProductosPage from './pages/ProductosPage';
+import DetallePage from './pages/DetallePage';
 
 export default function MyApp() {
     const v = 6;
@@ -11,6 +13,8 @@ export default function MyApp() {
     <Routes>
       <Route path="/" element={<Pruebas />} />
       <Route path="/receta" element={<RecetaPage />} />
+      <Route path="/productos" element={<ProductosPage />} />
+      <Route path="/detalle/:id" element={<DetallePage />} />
     </Routes>
   )
 }

@@ -1,12 +1,8 @@
 import React from 'react'
 import GridProductos from '../components/GridProductos'
 
-
-export default function PruebasProductos() {
+export default function ProductosPage() {
   return (
-    <div>
-        <GridProductos />
-    </div>
-    
+    <GridProductos />
   )
 }
