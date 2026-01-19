@@ -18,12 +18,14 @@ export default function CarruselProductos() {
 
   return (
     <>
-    <div>CarruselProductos</div>
+    <div>Carrusel de productos</div>
+
+    <button onClick={()=> setIdProducto(idProducto-1)}>-</button>
 
     <CardProductos key={db.productus.id} producto={productoEncontrado}/>
 
     <button onClick={()=> setIdProducto(idProducto+1)}>+</button>
-    <button onClick={()=> setIdProducto(idProducto-1)}>-</button>
+    
     </>
   )
 }
