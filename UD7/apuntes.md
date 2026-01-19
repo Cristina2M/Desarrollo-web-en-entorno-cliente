@@ -15,3 +15,8 @@ comando para crear un proyecto usando vite y la base de react => npm create vite
 
 si se cierra el servidor, usar el comando => npm run dev
 
+
+
+
+para añadir enlaces/hiperenlaces dentro del proyecto => npm i react-router
+
