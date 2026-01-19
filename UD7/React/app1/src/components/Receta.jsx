@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import IngredientesReceta from './IngredientesReceta'
 import FormReceta from './FormReceta'
+import Navegador from './Navegador';
 
 export default function Receta() {
     const arIngredientes = [
@@ -12,6 +13,7 @@ export default function Receta() {
 
     return (
         <>
+        <Navegador />
             <div>Receta de cocina</div>
             <h1>Receta Pollo Frito</h1>
             <IngredientesReceta ingredientes={ingredientes} />
