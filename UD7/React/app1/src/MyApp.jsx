@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router';
 import ProductosPage from './pages/ProductosPage';
 import DetallePage from './pages/DetallePage';
 import ProductosFetch from './pages/ProductosFetch';
+import PostPage from './pages/PostPage';
 
 export default function MyApp() {
     const v = 6;
@@ -17,6 +18,8 @@ export default function MyApp() {
       <Route path="/productos" element={<ProductosPage />} />
       <Route path="/fetch" element={<ProductosFetch />} />
       <Route path="/detalle/:id" element={<DetallePage />} />
+      <Route path="/post" element={<PostPage />} />
+
     </Routes>
   )
 }
