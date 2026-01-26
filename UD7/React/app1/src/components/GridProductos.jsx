@@ -7,7 +7,6 @@ import Navegador from './Navegador'
 export default function GridProductos() {
   return (
     <div>
-      <Navegador />
         <h1 className={style.h1}>Lista de productos</h1>
         
           {db.productus.map((producto) => (

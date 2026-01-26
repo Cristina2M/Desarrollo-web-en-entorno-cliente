@@ -21,3 +21,12 @@ si se cierra el servidor, usar el comando => npm run dev
 para añadir enlaces/hiperenlaces dentro del proyecto => npm i react-router
 URL para mirar el tema de los enlaces => https://reactrouter.com/start/declarative/installation 
 
+
+
+
+Para los iconos:
+npm install react-icons --save
+
+
+
+
