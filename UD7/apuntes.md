@@ -28,5 +28,6 @@ Para los iconos:
 npm install react-icons --save
 
 
-
+Installing React Hook Form:
+npm install react-hook-form
 
