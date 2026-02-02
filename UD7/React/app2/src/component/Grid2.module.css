@@ -1,0 +1,17 @@
+.spinner {
+  width: 100px; /* Tamaño */
+  height: 100px;
+  border: 5px solid rgba(255, 66, 129, 0.496); 
+  border-radius: 50%; /* Para hacerlo redondo */
+  border-left-color: rgb(255, 66, 129);
+  animation: spin 1s linear infinite; /* Aplica la animación */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Inicio: 0 grados */
+  }
+  100% {
+    transform: rotate(360deg); /* Fin: 360 grados (una vuelta completa) */
+  }
+}

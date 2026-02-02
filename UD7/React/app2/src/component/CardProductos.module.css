@@ -1,0 +1,23 @@
+.div{
+    box-sizing: border-box;
+    color: orange;
+    border: 1px solid rgb(95, 95, 95);
+    width: 300px;
+    height: 450px;
+    margin: 10p;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+    width: 200px;
+    display: inline-block;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+

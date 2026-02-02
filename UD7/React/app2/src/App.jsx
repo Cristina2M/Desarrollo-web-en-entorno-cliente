@@ -7,6 +7,9 @@ import Home from './pages/Home'
 import Formularioage from './pages/Formularioage'
 import FormReactHookForm from './component/FormReactHookForm';
 import CarritoPage from './pages/CarritoPage';
+import ProductosPageDebounce from './pages/ProductosPageDebounce';
+import Login from './pages/Login';
+import DummyPage from './pages/DummyPage';
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
         <Route path="/formulario" element={<Formularioage />} />
         <Route path="/formulario/rhf" element={<FormReactHookForm />} />
         <Route path="/carrito" element={<CarritoPage />} />
+        <Route path="/debounce" element={<ProductosPageDebounce />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dummy" element={<DummyPage />} />
       </Routes>
     </>
   )

@@ -4,7 +4,7 @@ import style from './Grid2.module.css'
 
 
 import { FaSpinner } from "react-icons/fa";
-import useGet from '../hooks/useGet';
+import useGet from '../hook/useGet';
 
 
 export default function Grid2({ value, funcion }) {
@@ -51,19 +51,6 @@ export default function Grid2({ value, funcion }) {
 
     return (
         <div>
-            <h1 className={style.h1}>Lista de productos</h1>
-            <form>
-                <input type="text" id='inputSearch'/>
-                <button onClick={(e)=>{
-                    e.preventDefault();
-                    const para=document.getElementById('inputSearch').value
-                    console.log('Para:', para)
-                    funcion({search: para})
-                }}>Buscar</button>
-            </form>
-            {/* <button onClick={getData}>Cargar Productos</button> */}
-
-            <p>Valor del search: {value}</p>
 
             {productosFiltrados.map((producto) => (
                 <CardProductos key={producto.id} producto={producto} />
